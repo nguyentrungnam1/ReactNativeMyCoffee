@@ -1,11 +1,16 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Order from './Order';
 import Store from './Store';
 import {Button, Text, View} from 'react-native';
 import Notification from './Notification';
 import Account from './Account';
+import FontAwesomeIcons from 'react-native-vector-icons/FontAwesome';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+
+
 
 function HomeScreen( {navigation}) {
   return (
@@ -39,17 +44,29 @@ function HomeScreen( {navigation}) {
 }
 
 const Stack = createNativeStackNavigator();
+const Tab = createBottomTabNavigator();
 const Home = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="Store" component={Store} />
-        <Stack.Screen name="Account" component={Account} />
-        <Stack.Screen name="Notification" component={Notification} />
-        <Stack.Screen name="Order" component={Order} />
-        
-      </Stack.Navigator>
+      <Tab.Navigator screenOptions ={{
+      tabBarActiveTintColor:'yellow',
+      tabBarInactiveTintColor:'black',
+      tabBarLabelStyle:{
+        fontSize: 18,
+      }
+
+      }}
+      >
+        <Tab.Screen name= "Home " component = {HomeScreen} 
+          options = {{tabBarIcon: () => (
+            <FontAwesomeIcons name="home"  size={26} />
+          ),}}
+        />
+        <Tab.Screen name= "Store " component = {Store}/>
+        <Tab.Screen name= "Account" component = {Account}/>
+        <Tab.Screen name= "Notification" component = {Notification}/>
+        <Tab.Screen name = "Order" component = {Order}/>
+      </Tab.Navigator>
     </NavigationContainer>
   );
 };
