@@ -5,13 +5,7 @@ const Account = ({navigation}) => {
   return (
     <SafeAreaView>
       <Text>Đây là màng hình tài khoản</Text>
-      <Button
-        title="go to home screen"
-        onPress={() => {
-          navigation.navigate('Home');
-        }}
-      />
-      
+     
     </SafeAreaView>
   );
 };
