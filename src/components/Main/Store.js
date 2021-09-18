@@ -6,7 +6,7 @@ const Store = ({navigation}) => {
   return (
     <View>
       <Button  title ="go to Home Screen"
-        onPress = {()=> navigation.push("Home")
+        onPress = {()=> navigation.navigate("Home")
         }
       />
     </View>
