@@ -12,7 +12,7 @@ import {
 } from 'react-native';
 
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
-
+import AntDesign from 'react-native-vector-icons/AntDesign';
 
 const Account = () => {
   return (
@@ -21,10 +21,15 @@ const Account = () => {
         <View style={styles.container}>
           <TouchableWithoutFeedback>
             <View style={styles.hearder}>
-              <Image
+              {/* <Image
                 source={require('../../assets/icon/contact.png')}
                 style={styles.imgHearder}
-              />
+              /> */}
+              
+              <View  style={styles.imgHearder}>
+                <AntDesign name="user" size={50} color="#cd9e3c" />
+              </View>
+
               <Text style={styles.textLogin}>Đăng nhập</Text>
               <View style={styles.rank}>
                 <Text style={styles.textRank}>NĂNG LƯỢNG</Text>
@@ -63,33 +68,126 @@ const Account = () => {
               </View>
             </TouchableOpacity>
           </View>
-        </View>
-        <View style = {styles.itemContainer}>
-          <FontAwesome name = "chevron-right" size ={60}/>
-        </View>
 
+          {/* item */}
 
+          <View style={styles.titleItem}>
+            <Text>Thông tin tài khoản</Text>
+          </View>
+          <TouchableWithoutFeedback>
+            <View style={styles.itemContainer}>
+              <View
+                style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+                <AntDesign name="book" size={20} />
+                <Text style={{paddingLeft: 5}}>Địa chỉ giao hàng</Text>
+              </View>
+              <FontAwesome name="chevron-right" size={20} />
+            </View>
+          </TouchableWithoutFeedback>
+
+          <TouchableWithoutFeedback>
+            <View style={styles.itemContainer}>
+              <View
+                style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+                <AntDesign name="setting" size={20} />
+                <Text style={{paddingLeft: 5}}>Thiết lập tài khoản</Text>
+              </View>
+              <FontAwesome name="chevron-right" size={20} />
+            </View>
+          </TouchableWithoutFeedback>
+
+          <TouchableWithoutFeedback>
+            <View style={styles.itemContainer}>
+              <View
+                style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+                <AntDesign name="hearto" size={20} />
+                <Text style={{paddingLeft: 5}}>Sản phẩm yêu thích</Text>
+              </View>
+              <FontAwesome name="chevron-right" size={20} />
+            </View>
+          </TouchableWithoutFeedback>
+
+          <View style={styles.titleItem}>
+            <Text>Thông tin ứng dụng</Text>
+          </View>
+
+          <TouchableWithoutFeedback>
+            <View style={styles.itemContainer}>
+              <View
+                style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+                <AntDesign name="earth" size={20} />
+                <Text style={{paddingLeft: 5}}>Ngôn ngữ</Text>
+              </View>
+              <FontAwesome name="chevron-right" size={20} />
+            </View>
+          </TouchableWithoutFeedback>
+
+          <TouchableWithoutFeedback>
+            <View style={styles.itemContainer}>
+              <View
+                style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+                <AntDesign name="filetext1" size={20} />
+                <Text style={{paddingLeft: 5}}>Điều khoản và điều kiện</Text>
+              </View>
+              <FontAwesome name="chevron-right" size={20} />
+            </View>
+          </TouchableWithoutFeedback>
+
+          <TouchableWithoutFeedback>
+            <View style={styles.itemContainer}>
+              <View
+                style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+                <AntDesign name="questioncircleo" size={20} />
+                <Text style={{paddingLeft: 5}}>Câu hỏi thường gặp</Text>
+              </View>
+              <FontAwesome name="chevron-right" size={20} />
+            </View>
+          </TouchableWithoutFeedback>
+
+          <TouchableWithoutFeedback>
+            <View style={styles.itemContainer}>
+              <View
+                style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+                <AntDesign name="exclamationcircleo" size={20} />
+                <Text style={{paddingLeft: 5}}>Liên hệ</Text>
+              </View>
+              <FontAwesome name="chevron-right" size={20} />
+            </View>
+          </TouchableWithoutFeedback>
+
+          <TouchableWithoutFeedback>
+            <View style={styles.logout}>
+              <Text style={styles.textLogout}>Đăng xuất</Text>
+            </View>
+          </TouchableWithoutFeedback>
+        </View>
       </ScrollView>
     </SafeAreaView>
   );
 };
 
+const BORDER = {
+  borderBottomWidth: 1,
+  borderBottomColor: 'gray',
+};
 const styles = StyleSheet.create({
   container: {
     marginLeft: 15,
     marginRight: 15,
   },
   hearder: {
-    backgroundColor: 'red',
+    // backgroundColor: 'red',
     alignItems: 'center',
     marginTop: 15,
   },
   imgHearder: {
-    width: 85,
-    height: 90,
+    width:80,
+    height:80,
     backgroundColor: 'black',
     borderRadius: 50,
     marginBottom: 15,
+    justifyContent:'center',
+    alignItems:'center',
   },
   textLogin: {
     fontSize: 20,
@@ -106,7 +204,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   textRank: {
-    color: 'yellow',
+    color: '#cd9e3c',
   },
 
   //
@@ -136,6 +234,30 @@ const styles = StyleSheet.create({
   imgElement: {
     width: 25,
     height: 25,
+  },
+
+  //item
+  titleItem: {
+    ...BORDER,
+    marginTop: 15,
+  },
+  itemContainer: {
+    ...BORDER,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    height: 50,
+    alignItems: 'center',
+  },
+  logout: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    marginTop: 15,
+    marginBottom: 15,
+  },
+  textLogout: {
+    fontSize: 25,
+    textDecorationLine: 'underline',
+    color: 'red',
   },
 });
 export default Account;

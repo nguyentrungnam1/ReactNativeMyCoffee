@@ -18,6 +18,8 @@ import Notification from './Notification';
 import Account from './Account';
 import FontAwesomeIcons from 'react-native-vector-icons/FontAwesome';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import IoniconsIcons from 'react-native-vector-icons/Ionicons';
+import AntDesign from 'react-native-vector-icons/AntDesign';
 
 function HomeScreen() {
   return (
@@ -25,10 +27,15 @@ function HomeScreen() {
       <View style={styles.header}>
         <View>
           <TouchableOpacity style={styles.buttonLogin}>
-            <Image
-              source={require('../../assets/icon/contact.png')}
-              style={styles.imgContact}
-            />
+            <View>
+              <AntDesign
+                name="user"
+                size={30}
+                color="#cd9e3c"
+                style={styles.imgContact}
+              />
+            </View>
+
             <Text style={styles.textHeder}> Đăng nhập </Text>
           </TouchableOpacity>
         </View>
@@ -68,7 +75,7 @@ function HomeScreen() {
           </View>
         </View>
         <View style={styles.special}>
-          <Text style = {styles.textHederSpecial}>Ưu đãi</Text>
+          <Text style={styles.textHederSpecial}>Ưu đãi</Text>
           <ScrollView horizontal={true}>
             <View style={styles.elementSpecial}>
               <TouchableOpacity>
@@ -86,7 +93,7 @@ function HomeScreen() {
                   />
                   {/* icon */}
                   <Text>05/08/2021 - 31/12/2021</Text>
-                  <Text style = {styles.seeMore}>Xem thêm</Text>
+                  <Text style={styles.seeMore}>Xem thêm</Text>
                 </View>
               </TouchableOpacity>
             </View>
@@ -107,7 +114,7 @@ function HomeScreen() {
                   />
                   {/* icon */}
                   <Text>05/08/2021 - 31/12/2021</Text>
-                  <Text style = {styles.seeMore}>Xem thêm</Text>
+                  <Text style={styles.seeMore}>Xem thêm</Text>
                 </View>
               </TouchableOpacity>
             </View>
@@ -127,7 +134,7 @@ function HomeScreen() {
                   />
                   {/* icon */}
                   <Text>05/08/2021 - 31/12/2021</Text>
-                  <Text style = {styles.seeMore}>Xem thêm</Text>
+                  <Text style={styles.seeMore}>Xem thêm</Text>
                 </View>
               </TouchableOpacity>
             </View>
@@ -147,7 +154,7 @@ function HomeScreen() {
                   />
                   {/* icon */}
                   <Text>05/08/2021 - 31/12/2021</Text>
-                  <Text style = {styles.seeMore}>Xem thêm</Text>
+                  <Text style={styles.seeMore}>Xem thêm</Text>
                 </View>
               </TouchableOpacity>
             </View>
@@ -167,15 +174,15 @@ function HomeScreen() {
                   />
                   {/* icon */}
                   <Text>05/08/2021 - 31/12/2021</Text>
-                  <Text style = {styles.seeMore}>Xem thêm</Text>
+                  <Text style={styles.seeMore}>Xem thêm</Text>
                 </View>
               </TouchableOpacity>
             </View>
           </ScrollView>
         </View>
-        
+
         <View style={styles.special}>
-          <Text style = {styles.textHederSpecial}>Tin Tức</Text>
+          <Text style={styles.textHederSpecial}>Tin Tức</Text>
           <ScrollView horizontal={true}>
             <View style={styles.elementSpecial}>
               <TouchableOpacity>
@@ -193,7 +200,7 @@ function HomeScreen() {
                   />
                   {/* icon */}
                   <Text>05/08/2021 - 31/12/2021</Text>
-                  <Text style = {styles.seeMore}>Xem thêm</Text>
+                  <Text style={styles.seeMore}>Xem thêm</Text>
                 </View>
               </TouchableOpacity>
             </View>
@@ -214,7 +221,7 @@ function HomeScreen() {
                   />
                   {/* icon */}
                   <Text>05/08/2021 - 31/12/2021</Text>
-                  <Text style = {styles.seeMore}>Xem thêm</Text>
+                  <Text style={styles.seeMore}>Xem thêm</Text>
                 </View>
               </TouchableOpacity>
             </View>
@@ -234,7 +241,7 @@ function HomeScreen() {
                   />
                   {/* icon */}
                   <Text>05/08/2021 - 31/12/2021</Text>
-                  <Text style = {styles.seeMore}>Xem thêm</Text>
+                  <Text style={styles.seeMore}>Xem thêm</Text>
                 </View>
               </TouchableOpacity>
             </View>
@@ -254,7 +261,7 @@ function HomeScreen() {
                   />
                   {/* icon */}
                   <Text>05/08/2021 - 31/12/2021</Text>
-                  <Text style = {styles.seeMore}>Xem thêm</Text>
+                  <Text style={styles.seeMore}>Xem thêm</Text>
                 </View>
               </TouchableOpacity>
             </View>
@@ -274,15 +281,15 @@ function HomeScreen() {
                   />
                   {/* icon */}
                   <Text>05/08/2021 - 31/12/2021</Text>
-                  <Text style = {styles.seeMore}>Xem thêm</Text>
+                  <Text style={styles.seeMore}>Xem thêm</Text>
                 </View>
               </TouchableOpacity>
             </View>
           </ScrollView>
         </View>
-      
+
         <View style={styles.special}>
-          <Text style = {styles.textHederSpecial}>Kiến thức pha chế</Text>
+          <Text style={styles.textHederSpecial}>Kiến thức pha chế</Text>
           <ScrollView horizontal={true}>
             <View style={styles.elementSpecial}>
               <TouchableOpacity>
@@ -300,7 +307,7 @@ function HomeScreen() {
                   />
                   {/* icon */}
                   <Text>05/08/2021 - 31/12/2021</Text>
-                  <Text style = {styles.seeMore}>Xem thêm</Text>
+                  <Text style={styles.seeMore}>Xem thêm</Text>
                 </View>
               </TouchableOpacity>
             </View>
@@ -321,7 +328,7 @@ function HomeScreen() {
                   />
                   {/* icon */}
                   <Text>05/08/2021 - 31/12/2021</Text>
-                  <Text style = {styles.seeMore}>Xem thêm</Text>
+                  <Text style={styles.seeMore}>Xem thêm</Text>
                 </View>
               </TouchableOpacity>
             </View>
@@ -341,7 +348,7 @@ function HomeScreen() {
                   />
                   {/* icon */}
                   <Text>05/08/2021 - 31/12/2021</Text>
-                  <Text style = {styles.seeMore}>Xem thêm</Text>
+                  <Text style={styles.seeMore}>Xem thêm</Text>
                 </View>
               </TouchableOpacity>
             </View>
@@ -361,7 +368,7 @@ function HomeScreen() {
                   />
                   {/* icon */}
                   <Text>05/08/2021 - 31/12/2021</Text>
-                  <Text style = {styles.seeMore}>Xem thêm</Text>
+                  <Text style={styles.seeMore}>Xem thêm</Text>
                 </View>
               </TouchableOpacity>
             </View>
@@ -381,16 +388,14 @@ function HomeScreen() {
                   />
                   {/* icon */}
                   <Text>05/08/2021 - 31/12/2021</Text>
-                  <Text style = {styles.seeMore}>Xem thêm</Text>
+                  <Text style={styles.seeMore}>Xem thêm</Text>
                 </View>
               </TouchableOpacity>
             </View>
           </ScrollView>
         </View>
-      
-      <View style={{height:100}}>
 
-      </View>
+        <View style={{height: 100}}></View>
       </ScrollView>
     </SafeAreaView>
   );
@@ -411,33 +416,64 @@ const Home = () => {
             backgroundColor: 'white',
             height: 70,
           },
-          
         }}>
-        <Tab.Screen name="Store" component={Store} />
-        <Tab.Screen name="Order" component={Order} />
+        <Tab.Screen
+          name="Store"
+          component={Store}
+          options={{
+            tabBarIcon: () => (
+              <MaterialCommunityIcons name="storefront-outline" size={26} />
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="Order"
+          component={Order}
+          options={{
+            tabBarIcon: () => (
+              <MaterialCommunityIcons name="coffee-outline" size={26} />
+            ),
+          }}
+        />
 
         <Tab.Screen
           name="Home"
           component={HomeScreen}
           options={{
-            tabBarIcon: () => <FontAwesomeIcons name="home" size={26} />,
+            tabBarIcon: () => (
+              <MaterialCommunityIcons name="home-outline" size={26} />
+            ),
             headerShown: false,
           }}
         />
-        <Tab.Screen name="Notification" component={Notification} />
-        <Tab.Screen name="Account" component={Account} />
+        <Tab.Screen
+          name="Notification"
+          component={Notification}
+          options={{
+            tabBarIcon: () => (
+              <IoniconsIcons name="ios-notifications-outline" size={26} />
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="Account"
+          component={Account}
+          options={{
+            tabBarIcon: () => (
+              <MaterialCommunityIcons name="account-circle-outline" size={26} />
+            ),
+          }}
+        />
       </Tab.Navigator>
     </NavigationContainer>
   );
 };
 
-
 const TEXT = {
-  fontSize:25,
-  fontWeight:'500',
+  fontSize: 25,
+  fontWeight: '500',
 };
 const styles = StyleSheet.create({
- 
   container: {
     backgroundColor: 'white',
   },
@@ -451,6 +487,11 @@ const styles = StyleSheet.create({
   imgContact: {
     width: 50,
     height: 50,
+    borderColor: 'yellow',
+    borderWidth: 3,
+    borderRadius: 50,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   textHeder: {
     justifyContent: 'center',
@@ -499,63 +540,60 @@ const styles = StyleSheet.create({
   },
   //
 
-  textHederSpecial:{
+  textHederSpecial: {
     ...TEXT,
-    marginTop:10,
+    marginTop: 10,
   },
   special: {
-     backgroundColor:'#f8f8f8',
+    backgroundColor: '#f8f8f8',
     marginLeft: 15,
-    marginTop:15,
-   
+    marginTop: 15,
   },
   elementSpecial: {
-    width:300,
+    width: 300,
     height: 220,
     marginTop: 30,
     // borderRadius:20,
-    shadowColor: "#000",
+    shadowColor: '#000',
     shadowOffset: {
       width: 0,
       height: 2,
     },
     shadowOpacity: 0.23,
     shadowRadius: 2.62,
-    
+
     elevation: 4,
-    marginRight:15,
-    borderRadius:5,
+    marginRight: 15,
+    borderRadius: 5,
   },
   imgElementSpecial: {
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
-    width:300,
+    width: 300,
   },
   iconLich: {
     width: 20,
     height: 20,
   },
-  textElementSpeacial:{
+  textElementSpeacial: {
     marginLeft: 15,
-    marginTop:15,
-    marginBottom:15,
-    fontSize:18,
-
+    marginTop: 15,
+    marginBottom: 15,
+    fontSize: 18,
   },
   dateSpeacial: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     marginLeft: 15,
-    marginRight:15,
+    marginRight: 15,
   },
-  seeMore:{
-    borderRadius:50,
-    color:'#cd9e3c',
-    borderColor:'#cd9e3c',
-    borderWidth:1,
-    width:90,
+  seeMore: {
+    borderRadius: 50,
+    color: '#cd9e3c',
+    borderColor: '#cd9e3c',
+    borderWidth: 1,
+    width: 90,
     textAlign: 'center',
-  }
-
+  },
 });
 export default Home;
