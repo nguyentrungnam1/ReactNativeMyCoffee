@@ -13,6 +13,7 @@ import {
 
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import AntDesign from 'react-native-vector-icons/AntDesign';
+import ItemAccount from '../ComponentSreen/ItemAccount';
 
 const Account = () => {
   return (
@@ -21,12 +22,7 @@ const Account = () => {
         <View style={styles.container}>
           <TouchableWithoutFeedback>
             <View style={styles.hearder}>
-              {/* <Image
-                source={require('../../assets/icon/contact.png')}
-                style={styles.imgHearder}
-              /> */}
-              
-              <View  style={styles.imgHearder}>
+              <View style={styles.imgHearder}>
                 <AntDesign name="user" size={50} color="#cd9e3c" />
               </View>
 
@@ -71,90 +67,21 @@ const Account = () => {
 
           {/* item */}
 
-          <View style={styles.titleItem}>
-            <Text>Thông tin tài khoản</Text>
-          </View>
-          <TouchableWithoutFeedback>
-            <View style={styles.itemContainer}>
-              <View
-                style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-                <AntDesign name="book" size={20} />
-                <Text style={{paddingLeft: 5}}>Địa chỉ giao hàng</Text>
-              </View>
-              <FontAwesome name="chevron-right" size={20} />
+          
+            <View style={styles.titleItem}>
+              <Text>Thông tin tài khoản</Text>
             </View>
-          </TouchableWithoutFeedback>
-
-          <TouchableWithoutFeedback>
-            <View style={styles.itemContainer}>
-              <View
-                style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-                <AntDesign name="setting" size={20} />
-                <Text style={{paddingLeft: 5}}>Thiết lập tài khoản</Text>
-              </View>
-              <FontAwesome name="chevron-right" size={20} />
+            <ItemAccount icon="book" text="Địa chỉ giao hàng" />
+            <ItemAccount icon="setting" text="Thiết lập tài khoản" />
+            <ItemAccount icon="hearto" text="Sản phẩm yêu thích" />
+            <View style={styles.titleItem}>
+              <Text>Thông tin ứng dụng</Text>
             </View>
-          </TouchableWithoutFeedback>
-
-          <TouchableWithoutFeedback>
-            <View style={styles.itemContainer}>
-              <View
-                style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-                <AntDesign name="hearto" size={20} />
-                <Text style={{paddingLeft: 5}}>Sản phẩm yêu thích</Text>
-              </View>
-              <FontAwesome name="chevron-right" size={20} />
-            </View>
-          </TouchableWithoutFeedback>
-
-          <View style={styles.titleItem}>
-            <Text>Thông tin ứng dụng</Text>
-          </View>
-
-          <TouchableWithoutFeedback>
-            <View style={styles.itemContainer}>
-              <View
-                style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-                <AntDesign name="earth" size={20} />
-                <Text style={{paddingLeft: 5}}>Ngôn ngữ</Text>
-              </View>
-              <FontAwesome name="chevron-right" size={20} />
-            </View>
-          </TouchableWithoutFeedback>
-
-          <TouchableWithoutFeedback>
-            <View style={styles.itemContainer}>
-              <View
-                style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-                <AntDesign name="filetext1" size={20} />
-                <Text style={{paddingLeft: 5}}>Điều khoản và điều kiện</Text>
-              </View>
-              <FontAwesome name="chevron-right" size={20} />
-            </View>
-          </TouchableWithoutFeedback>
-
-          <TouchableWithoutFeedback>
-            <View style={styles.itemContainer}>
-              <View
-                style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-                <AntDesign name="questioncircleo" size={20} />
-                <Text style={{paddingLeft: 5}}>Câu hỏi thường gặp</Text>
-              </View>
-              <FontAwesome name="chevron-right" size={20} />
-            </View>
-          </TouchableWithoutFeedback>
-
-          <TouchableWithoutFeedback>
-            <View style={styles.itemContainer}>
-              <View
-                style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-                <AntDesign name="exclamationcircleo" size={20} />
-                <Text style={{paddingLeft: 5}}>Liên hệ</Text>
-              </View>
-              <FontAwesome name="chevron-right" size={20} />
-            </View>
-          </TouchableWithoutFeedback>
-
+            <ItemAccount icon="earth" text="Ngôn ngữ" />
+            <ItemAccount icon="filetext1" text="Điều khoản và điều kiện" />
+            <ItemAccount icon="questioncircleo" text="Câu hỏi thường gặp" />
+            <ItemAccount icon="exclamationcircleo" text="Liên hệ" />
+        
           <TouchableWithoutFeedback>
             <View style={styles.logout}>
               <Text style={styles.textLogout}>Đăng xuất</Text>
@@ -181,13 +108,13 @@ const styles = StyleSheet.create({
     marginTop: 15,
   },
   imgHearder: {
-    width:80,
-    height:80,
+    width: 80,
+    height: 80,
     backgroundColor: 'black',
     borderRadius: 50,
     marginBottom: 15,
-    justifyContent:'center',
-    alignItems:'center',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   textLogin: {
     fontSize: 20,
@@ -241,23 +168,11 @@ const styles = StyleSheet.create({
     ...BORDER,
     marginTop: 15,
   },
-  itemContainer: {
-    ...BORDER,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    height: 50,
-    alignItems: 'center',
-  },
-  logout: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    marginTop: 15,
-    marginBottom: 15,
-  },
   textLogout: {
     fontSize: 25,
     textDecorationLine: 'underline',
     color: 'red',
+    textAlign:'center',
   },
 });
 export default Account;
